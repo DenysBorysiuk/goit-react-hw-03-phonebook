@@ -16,6 +16,14 @@ export class App extends Component {
     filter: '',
   };
 
+  componentDidMount() {
+    console.log('did mount');
+  }
+
+  componentDidUpdate() {
+    console.log('did updade');
+  }
+
   addContact = ({ name, number }) => {
     const contact = {
       id: nanoid(),
