@@ -2,12 +2,14 @@ import { Formik } from 'formik';
 import * as yup from 'yup';
 import PropTypes from 'prop-types';
 import { FormWrap, Input, Message, Label, FormBtn } from './ContactForm.styled';
+import { BsPersonPlusFill } from 'react-icons/bs';
 
 const schema = yup.object().shape({
   name: yup
     .string()
     .required()
     .trim()
+    .max(12, 'must be max 12 characters long')
     .matches(
       /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/,
       'Name may contain only letters, apostrophe, dash and spaces.'
@@ -16,6 +18,7 @@ const schema = yup.object().shape({
     .string()
     .required()
     .trim()
+    .max(12, 'must be max 12 characters long')
     .matches(
       /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/,
       'Number must be digits and can contain spaces, dashes, parentheses and can start with +'
@@ -50,7 +53,10 @@ export const ContactForm = ({ addContact }) => {
           <Input type="tel" name="number" />
           <Message name="number" component="div" />
         </Label>
-        <FormBtn type="submit">Add contact</FormBtn>
+        <FormBtn type="submit">
+          <BsPersonPlusFill />
+          &nbsp; Add contact
+        </FormBtn>
       </FormWrap>
     </Formik>
   );

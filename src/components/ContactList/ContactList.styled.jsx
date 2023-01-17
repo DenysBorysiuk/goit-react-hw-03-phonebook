@@ -8,7 +8,6 @@ export const List = styled.ul`
   padding: 10px;
   max-width: 400px;
 
-  border-radius: 20px;
-  box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),
-    inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+  border-radius: ${props => props.theme.borderRadius};
+  box-shadow: ${props => props.theme.boxShadow.In};
 `;

@@ -6,9 +6,8 @@ export const FormWrap = styled(Form)`
   padding-top: 20px;
   padding-bottom: 20px;
   max-width: 400px;
-  border-radius: 20px;
-  box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),
-    inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+  border-radius: ${props => props.theme.borderRadius};
+  box-shadow: ${props => props.theme.boxShadow.In};
 `;
 
 export const Label = styled.label`
@@ -21,13 +20,14 @@ export const Label = styled.label`
   padding-bottom: 25px;
   padding-left: 65px;
   width: 60%;
+
   font-size: 18px;
   font-weight: 500;
   text-align: left;
   cursor: pointer;
-  border-radius: 20px;
-  box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
-    5px 5px 9px rgba(94, 104, 121, 0.3);
+
+  border-radius: ${props => props.theme.borderRadius};
+  box-shadow: ${props => props.theme.boxShadow.Out};
 `;
 
 export const Input = styled(Field)`
@@ -39,17 +39,13 @@ export const Input = styled(Field)`
   background-color: transparent;
   outline: none;
 
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
   border: none;
-  border-radius: 20px;
-  box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),
-    inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+  border-radius: ${props => props.theme.borderRadius};
+  box-shadow: ${props => props.theme.boxShadow.In};
 
   &:hover,
   &:focus {
-    box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
-      5px 5px 9px rgba(94, 104, 121, 0.3);
+    box-shadow: ${props => props.theme.boxShadow.Out};
   }
 `;
 
@@ -59,21 +55,19 @@ export const Message = styled(ErrorMessage)`
 `;
 
 export const FormBtn = styled.button`
-  display: inline-block;
+  display: inline-flex;
   padding: 8px 24px;
+
   font-size: 18px;
   font-weight: 500;
   background-color: transparent;
   cursor: pointer;
-  transition: box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   border: none;
-  border-radius: 20px;
-  box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
-    5px 5px 9px rgba(94, 104, 121, 0.3);
+  border-radius: ${props => props.theme.borderRadius};
+  box-shadow: ${props => props.theme.boxShadow.Out};
 
   &:active {
-    box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),
-      inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+    box-shadow: ${props => props.theme.boxShadow.In};
   }
 `;

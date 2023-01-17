@@ -9,9 +9,8 @@ export const Label = styled.label`
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  border-radius: 20px;
-  box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
-    5px 5px 9px rgba(94, 104, 121, 0.3);
+  border-radius: ${props => props.theme.borderRadius};
+  box-shadow: ${props => props.theme.boxShadow.Out};
 `;
 
 export const Input = styled.input`
@@ -24,13 +23,11 @@ export const Input = styled.input`
   background-color: transparent;
   border: none;
   outline: none;
-  border-radius: 20px;
-  box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),
-    inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+  border-radius: ${props => props.theme.borderRadius};
+  box-shadow: ${props => props.theme.boxShadow.In};
 
   &:hover,
   &:focus {
-    box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
-      5px 5px 9px rgba(94, 104, 121, 0.3);
+    box-shadow: ${props => props.theme.boxShadow.Out};
   }
 `;
