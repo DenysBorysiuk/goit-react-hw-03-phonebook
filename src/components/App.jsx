@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
-import { Container } from './App.styled';
+import { Container, Title, SubTitle } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -12,7 +12,6 @@ export class App extends Component {
   };
 
   componentDidMount() {
-    // console.log('did mount');
     const contacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(contacts);
 
@@ -22,7 +21,6 @@ export class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    // console.log('did updade');
     if (this.state.contacts !== prevState.contacts)
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
   }
@@ -69,10 +67,10 @@ export class App extends Component {
   render() {
     return (
       <Container>
-        <h1>Phonebook</h1>
+        <Title>Phonebook</Title>
         <ContactForm addContact={this.addContact} />
 
-        <h2>Contacts</h2>
+        <SubTitle>Contacts</SubTitle>
         <Filter value={this.state.filter} onChangeFilter={this.handleChange} />
         <ContactList
           contacts={this.getVisibleContacts()}

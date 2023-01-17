@@ -2,21 +2,35 @@ import styled from '@emotion/styled';
 
 export const Label = styled.label`
   display: block;
-  margin-top: 20px;
+  margin: 20px auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-width: 50%;
   font-size: 18px;
   font-weight: 500;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
+    5px 5px 9px rgba(94, 104, 121, 0.3);
 `;
 
 export const Input = styled.input`
   display: block;
   margin-top: 4px;
-  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 8px 10px;
+  width: 80%;
+  background-color: transparent;
+  border: none;
   outline: none;
-  border-radius: 3px;
-  border: 1px solid grey;
+  border-radius: 20px;
+  box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),
+    inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+
   &:hover,
   &:focus {
-    border-color: transparent;
-    box-shadow: 0px 0px 4px 1px rgba(2, 52, 201, 1);
+    box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
+      5px 5px 9px rgba(94, 104, 121, 0.3);
   }
 `;
