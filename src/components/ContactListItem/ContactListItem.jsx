@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Item, ContactText, ContactBtn } from './ContactListItem.styled';
-import { BsPersonFill } from 'react-icons/bs';
+import { BsPersonFill, BsXLg } from 'react-icons/bs';
 
 export const ContactListItem = ({ name, number, id, onDeleteContact }) => (
   <Item>
@@ -8,7 +8,9 @@ export const ContactListItem = ({ name, number, id, onDeleteContact }) => (
       <BsPersonFill />
       &nbsp;{name}: {number}
     </ContactText>
-    <ContactBtn onClick={() => onDeleteContact(id)}>delete</ContactBtn>
+    <ContactBtn onClick={() => onDeleteContact(id)}>
+      <BsXLg />
+    </ContactBtn>
   </Item>
 );
 

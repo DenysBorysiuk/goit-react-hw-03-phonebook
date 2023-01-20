@@ -16,14 +16,15 @@ export const ContactText = styled.span`
 `;
 
 export const ContactBtn = styled.button`
-  // padding: 8px 24px;
-  font-size: 18px;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
   background-color: transparent;
   cursor: pointer;
 
   border: none;
-  border-radius: ${props => props.theme.borderRadius};
+  border-radius: 50px;
   box-shadow: ${props => props.theme.boxShadow.Out};
 
   &:active {

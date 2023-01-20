@@ -45,12 +45,12 @@ export const ContactForm = ({ addContact }) => {
       <FormWrap autoComplete="off">
         <Label>
           Name
-          <Input type="text" name="name" />
+          <Input type="text" name="name" placeholder="Enter contact name" />
           <Message name="name" component="div" />
         </Label>
         <Label>
           Number
-          <Input type="tel" name="number" />
+          <Input type="tel" name="number" placeholder="Enter contact number" />
           <Message name="number" component="div" />
         </Label>
         <FormBtn type="submit">

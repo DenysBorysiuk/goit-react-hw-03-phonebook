@@ -26,6 +26,10 @@ export const Input = styled.input`
   border-radius: ${props => props.theme.borderRadius};
   box-shadow: ${props => props.theme.boxShadow.In};
 
+  &::placeholder {
+    text-align: center;
+  }
+
   &:hover,
   &:focus {
     box-shadow: ${props => props.theme.boxShadow.Out};
